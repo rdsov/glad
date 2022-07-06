@@ -10,3 +10,6 @@ project "glad"
 	}
 
 	sysincludedirs "include"
+
+	filter "system:linux"
+		pic "on"
