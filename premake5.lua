@@ -11,5 +11,14 @@ project "glad"
 
 	sysincludedirs "include"
 
+	filter "system:windows"
+		staticruntime "off"
+
+	filter { "configurations:Debug", "system:windows" }
+		runtime "Debug"
+
+	filter { "configurations:Release", "system:windows" }
+		runtime "Release"
+
 	filter "system:linux"
 		pic "on"
